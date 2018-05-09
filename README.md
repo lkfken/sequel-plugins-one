@@ -7,7 +7,9 @@ This Sequel plugin added a dataset method <i>#one</i> which return 1 row if the 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'sequel-plugins-one'
+# frozen_string_literal: true
+git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
+gem 'sequel-plugins-one', github: 'lkfken/sequel-plugins-one'
 ```
 
 And then execute:
