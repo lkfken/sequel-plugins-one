@@ -4,7 +4,7 @@ module Sequel
       module DatasetMethods
         def one
           rows = fetch_two
-          rows.one? ? rows.first : fail(NotOneRow)
+          rows.one? ? rows.first : fail(NotOneRow, "found #{rows.size.zero? ? '0' : '>1'} records")
         end
 
         private
